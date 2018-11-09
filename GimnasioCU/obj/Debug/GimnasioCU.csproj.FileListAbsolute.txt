@@ -1,0 +1,32 @@
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe.config
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.pdb
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Form1.resources
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Properties.Resources.resources
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.GenerateResource.Cache
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.exe
+C:\Users\Gonzalo\source\repos\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.pdb
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe.config
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.pdb
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csprojAssemblyReference.cache
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Properties.Resources.resources
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.GenerateResource.cache
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.CoreCompileInputs.cache
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.exe
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.pdb
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Principal.resources
+C:\Users\pinap\Desktop\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Servicios.resources
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe.config
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.exe
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\bin\Debug\GimnasioCU.pdb
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csprojAssemblyReference.cache
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Principal.resources
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Properties.Resources.resources
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.Servicios.resources
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.GenerateResource.cache
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.csproj.CoreCompileInputs.cache
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.exe
+C:\Users\pinap\Google Drive\Escuela\07 semestre\Administración y evaluación de proyectos de tecnologías de información\GimnasioCU\GimnasioCU\obj\Debug\GimnasioCU.pdb
