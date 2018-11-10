@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace GimnasioCU
 {
-	public partial class Principal : Form
+    public partial class Principal : Form
 	{
 		public Principal()
 		{
@@ -57,11 +58,6 @@ namespace GimnasioCU
 			SendMessage(this.Handle, 0x112, 0xf012, 0);
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-            
-		}
-
         private void btnServicios_Click(object sender, EventArgs e)
         {
             Servicios settingsForm = new Servicios();
@@ -71,7 +67,40 @@ namespace GimnasioCU
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            String fecha = DateTime.Now.ToString("D/M/YYYY");
+            SqlConnection con = new SqlConnection("Data Source = DELL; Initial Catalog = gimnasio; Integrated Security = True"); try
+            {
+                con.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se realizó la conexión");
+                this.Close();
+            }
+
+            String Confirmar;
+
+            String Nombre = txtNombre.Text;
+            String Programa = cBoxPrograma.GetItemText(cBoxPrograma.SelectedItem);
+            String Matricula = txtMatricula.Text;
+            String Servicio = cBoxServicio.GetItemText(cBoxServicio.SelectedItem);
+            String Sexo;
+
+            if (Masculino.Checked)
+            {
+                Sexo = Masculino.Text;
+            }
+            else
+            {
+                Sexo = Femenino.Text;
+            }
+
+
+            Confirmar = "INSERT INTO activos VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
+
+            SqlCommand myCommand = new SqlCommand(Confirmar, con);
+            int i = myCommand.ExecuteNonQuery();
+            MessageBox.Show("Se guardo el registro");
+            con.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,14 +110,9 @@ namespace GimnasioCU
             timer1.Start();
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtMatricula_TextChanged(object sender, EventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void Principal_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
+            contador.Text = txtMatricula.Text.Length.ToString();
         }
 
         private void txtMatricula_KeyPress(object sender, KeyPressEventArgs e)
@@ -96,9 +120,9 @@ namespace GimnasioCU
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void txtMatricula_TextChanged(object sender, EventArgs e)
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            contador.Text = txtMatricula.Text.Length.ToString();
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back) && !char.IsWhiteSpace(e.KeyChar);
         }
     }
 }

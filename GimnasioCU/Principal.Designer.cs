@@ -55,7 +55,7 @@
             this.gpSexo = new System.Windows.Forms.GroupBox();
             this.Femenino = new System.Windows.Forms.RadioButton();
             this.Masculino = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cBoxServicio = new System.Windows.Forms.ComboBox();
             this.cBoxPrograma = new System.Windows.Forms.ComboBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.devolucion = new System.Windows.Forms.TabPage();
+            this.btnDevolucion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -75,6 +76,7 @@
             this.tabControl1.SuspendLayout();
             this.prestamo.SuspendLayout();
             this.gpSexo.SuspendLayout();
+            this.devolucion.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -307,7 +309,7 @@
             this.prestamo.Controls.Add(this.contador);
             this.prestamo.Controls.Add(this.msnContador);
             this.prestamo.Controls.Add(this.gpSexo);
-            this.prestamo.Controls.Add(this.comboBox1);
+            this.prestamo.Controls.Add(this.cBoxServicio);
             this.prestamo.Controls.Add(this.cBoxPrograma);
             this.prestamo.Controls.Add(this.txtMatricula);
             this.prestamo.Controls.Add(this.txtNombre);
@@ -379,12 +381,12 @@
             this.Masculino.Text = "Masculino";
             this.Masculino.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cBoxServicio
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cBoxServicio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cBoxServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBoxServicio.FormattingEnabled = true;
+            this.cBoxServicio.Items.AddRange(new object[] {
             "Aros",
             "Balón Básquetbol",
             "Balón Fútbol",
@@ -422,10 +424,10 @@
             "Tapete Azul",
             "Tenis",
             "Vallas"});
-            this.comboBox1.Location = new System.Drawing.Point(225, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(497, 21);
-            this.comboBox1.TabIndex = 38;
+            this.cBoxServicio.Location = new System.Drawing.Point(225, 193);
+            this.cBoxServicio.Name = "cBoxServicio";
+            this.cBoxServicio.Size = new System.Drawing.Size(497, 21);
+            this.cBoxServicio.TabIndex = 38;
             // 
             // cBoxPrograma
             // 
@@ -500,6 +502,7 @@
             this.txtMatricula.Size = new System.Drawing.Size(127, 20);
             this.txtMatricula.TabIndex = 36;
             this.txtMatricula.TextChanged += new System.EventHandler(this.txtMatricula_TextChanged);
+            this.txtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatricula_KeyPress);
             // 
             // txtNombre
             // 
@@ -507,6 +510,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(497, 20);
             this.txtNombre.TabIndex = 35;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label5
             // 
@@ -565,6 +569,7 @@
             // 
             // devolucion
             // 
+            this.devolucion.Controls.Add(this.btnDevolucion);
             this.devolucion.Location = new System.Drawing.Point(4, 22);
             this.devolucion.Name = "devolucion";
             this.devolucion.Padding = new System.Windows.Forms.Padding(3);
@@ -572,6 +577,21 @@
             this.devolucion.TabIndex = 1;
             this.devolucion.Text = "Devolución";
             this.devolucion.UseVisualStyleBackColor = true;
+            // 
+            // btnDevolucion
+            // 
+            this.btnDevolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
+            this.btnDevolucion.FlatAppearance.BorderSize = 0;
+            this.btnDevolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
+            this.btnDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolucion.ForeColor = System.Drawing.Color.White;
+            this.btnDevolucion.Location = new System.Drawing.Point(524, 311);
+            this.btnDevolucion.Name = "btnDevolucion";
+            this.btnDevolucion.Size = new System.Drawing.Size(225, 35);
+            this.btnDevolucion.TabIndex = 13;
+            this.btnDevolucion.Text = "Terminar servicio";
+            this.btnDevolucion.UseVisualStyleBackColor = false;
             // 
             // Principal
             // 
@@ -599,6 +619,7 @@
             this.prestamo.PerformLayout();
             this.gpSexo.ResumeLayout(false);
             this.gpSexo.PerformLayout();
+            this.devolucion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,7 +652,7 @@
         private System.Windows.Forms.GroupBox gpSexo;
         private System.Windows.Forms.RadioButton Femenino;
         private System.Windows.Forms.RadioButton Masculino;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cBoxServicio;
         private System.Windows.Forms.ComboBox cBoxPrograma;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox txtNombre;
@@ -640,6 +661,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDevolucion;
     }
 }
 
