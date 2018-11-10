@@ -95,7 +95,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(674, 573);
+            this.btnConfirmar.Location = new System.Drawing.Point(497, 311);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(225, 35);
             this.btnConfirmar.TabIndex = 12;
@@ -299,7 +299,7 @@
             this.tabControl1.Location = new System.Drawing.Point(285, 204);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 354);
+            this.tabControl1.Size = new System.Drawing.Size(798, 394);
             this.tabControl1.TabIndex = 18;
             // 
             // prestamo
@@ -316,10 +316,11 @@
             this.prestamo.Controls.Add(this.label3);
             this.prestamo.Controls.Add(this.label2);
             this.prestamo.Controls.Add(this.label1);
+            this.prestamo.Controls.Add(this.btnConfirmar);
             this.prestamo.Location = new System.Drawing.Point(4, 22);
             this.prestamo.Name = "prestamo";
             this.prestamo.Padding = new System.Windows.Forms.Padding(3);
-            this.prestamo.Size = new System.Drawing.Size(790, 328);
+            this.prestamo.Size = new System.Drawing.Size(790, 368);
             this.prestamo.TabIndex = 0;
             this.prestamo.Text = "Préstamo";
             this.prestamo.UseVisualStyleBackColor = true;
@@ -327,18 +328,18 @@
             // contador
             // 
             this.contador.AutoSize = true;
-            this.contador.Location = new System.Drawing.Point(430, 177);
+            this.contador.Location = new System.Drawing.Point(445, 60);
             this.contador.Name = "contador";
             this.contador.Size = new System.Drawing.Size(0, 13);
-            this.contador.TabIndex = 28;
+            this.contador.TabIndex = 40;
             // 
             // msnContador
             // 
             this.msnContador.AutoSize = true;
-            this.msnContador.Location = new System.Drawing.Point(196, 177);
+            this.msnContador.Location = new System.Drawing.Point(222, 60);
             this.msnContador.Name = "msnContador";
             this.msnContador.Size = new System.Drawing.Size(227, 13);
-            this.msnContador.TabIndex = 19;
+            this.msnContador.TabIndex = 30;
             this.msnContador.Text = "Está limitado a 6 números. Números utilizados: ";
             // 
             // gpSexo
@@ -349,11 +350,11 @@
             this.gpSexo.Controls.Add(this.Masculino);
             this.gpSexo.Cursor = System.Windows.Forms.Cursors.Default;
             this.gpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gpSexo.Location = new System.Drawing.Point(197, 240);
+            this.gpSexo.Location = new System.Drawing.Point(225, 232);
             this.gpSexo.Margin = new System.Windows.Forms.Padding(0);
             this.gpSexo.Name = "gpSexo";
             this.gpSexo.Size = new System.Drawing.Size(200, 44);
-            this.gpSexo.TabIndex = 27;
+            this.gpSexo.TabIndex = 39;
             this.gpSexo.TabStop = false;
             // 
             // Femenino
@@ -384,14 +385,47 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Balón",
-            "Conos",
-            "Guantes",
-            "Raquetas"});
-            this.comboBox1.Location = new System.Drawing.Point(197, 201);
+            "Aros",
+            "Balón Básquetbol",
+            "Balón Fútbol",
+            "Balón Medicinal (8lbs)",
+            "Balón Medicinal (10lbs)",
+            "Balón Medicinal (14lbs)",
+            "Balón Voleibol",
+            "Banco de salto",
+            "Base ",
+            "Base Banco (Morado)",
+            "Base Banco (Verde)",
+            "Bastón",
+            "Bate",
+            "Bomba Pilates",
+            "Casaca (Blanco)",
+            "Casaca (Morado)",
+            "Cojín ABD",
+            "Cono",
+            "Cuerda",
+            "Espinilleras",
+            "Guante",
+            "Ligas",
+            "Mancuerna",
+            "Par Raquetas",
+            "Pares Rodilleras",
+            "Pelota M (Azul)",
+            "Pelota para Tenis",
+            "Pelota Ping Pong",
+            "Pelota Softball",
+            "Pilates",
+            "Polainas",
+            "Redes Voleibol",
+            "Ruedas plástico",
+            "Silbatos",
+            "Tapete Azul",
+            "Tenis",
+            "Vallas"});
+            this.comboBox1.Location = new System.Drawing.Point(225, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(497, 21);
-            this.comboBox1.TabIndex = 26;
+            this.comboBox1.TabIndex = 38;
             // 
             // cBoxPrograma
             // 
@@ -399,65 +433,90 @@
             this.cBoxPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxPrograma.FormattingEnabled = true;
             this.cBoxPrograma.Items.AddRange(new object[] {
-            "Administración",
+            "Administración de Empresas",
+            "Aeronáutica",
             "Ambiental",
             "Arquitectura",
-            "Automotriz",
+            "Artes Visuales",
+            "Biología",
+            "Biomédica",
+            "Biotecnología",
+            "Cirujano Dentista",
+            "Civil",
             "Comercio Exterior",
-            "Contaduría ",
+            "Contaduría",
             "Derecho",
+            "Diseño Digital de Medios Interactivos",
             "Diseño Gráfico",
+            "Diseño Industrial",
+            "Diseño Urbano y del Paisaje",
+            "Diseño de Interiores",
+            "Economía",
             "Educación",
+            "Eléctrica",
             "Enfermería",
             "Enseñanza del Inglés",
-            "Gerontologia",
             "Entrenamiento Deportivo",
+            "Finanzas",
+            "Física",
+            "Geociencias",
+            "Geoinformática",
+            "Gerontología",
+            "Historia",
+            "Industrial y de Sistemas",
+            "Licenciatura Hispanomexicana",
+            "Manufactura",
+            "Matemáticas",
             "Mecatrónica",
-            "Industrial",
-            "Industrial y Sistemas",
-            "Ing. Electrica ",
-            "MVZ",
+            "Mecánica",
+            "Médico Cirujano",
+            "Médico Veterinario Zootecnista",
+            "Música",
             "Nutrición",
             "Periodismo",
+            "Producción Musical",
             "Psicología",
             "Publicidad",
+            "Química",
+            "Químico Farmacéutico Biólogo",
+            "Seguridad y Políticas Públicas",
+            "Sistemas Automotrices",
             "Sistemas Computacionales",
+            "Sistemas Digitales y comunicaciones",
+            "Sociología",
             "Software",
             "Trabajo Social",
-            "Turismo",
-            "En blanco"});
-            this.cBoxPrograma.Location = new System.Drawing.Point(197, 93);
+            "Turismo"});
+            this.cBoxPrograma.Location = new System.Drawing.Point(225, 142);
             this.cBoxPrograma.Name = "cBoxPrograma";
             this.cBoxPrograma.Size = new System.Drawing.Size(497, 21);
-            this.cBoxPrograma.TabIndex = 25;
+            this.cBoxPrograma.TabIndex = 37;
             // 
             // txtMatricula
             // 
             this.txtMatricula.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtMatricula.Location = new System.Drawing.Point(197, 150);
+            this.txtMatricula.Location = new System.Drawing.Point(225, 32);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(497, 20);
-            this.txtMatricula.TabIndex = 24;
+            this.txtMatricula.Size = new System.Drawing.Size(127, 20);
+            this.txtMatricula.TabIndex = 36;
             this.txtMatricula.TextChanged += new System.EventHandler(this.txtMatricula_TextChanged);
-            this.txtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatricula_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(197, 44);
+            this.txtNombre.Location = new System.Drawing.Point(225, 91);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(497, 20);
-            this.txtNombre.TabIndex = 23;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 261);
+            this.label5.Location = new System.Drawing.Point(68, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 16);
-            this.label5.TabIndex = 22;
+            this.label5.TabIndex = 34;
             this.label5.Text = "Sexo";
             // 
             // label4
@@ -465,10 +524,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 206);
+            this.label4.Location = new System.Drawing.Point(68, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
-            this.label4.TabIndex = 21;
+            this.label4.TabIndex = 33;
             this.label4.Text = "Servicio";
             // 
             // label3
@@ -476,10 +535,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 150);
+            this.label3.Location = new System.Drawing.Point(68, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
-            this.label3.TabIndex = 20;
+            this.label3.TabIndex = 32;
             this.label3.Text = "Matrícula";
             // 
             // label2
@@ -487,10 +546,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 94);
+            this.label2.Location = new System.Drawing.Point(68, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 16);
-            this.label2.TabIndex = 19;
+            this.label2.TabIndex = 31;
             this.label2.Text = "Programa académico";
             // 
             // label1
@@ -498,10 +557,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 48);
+            this.label1.Location = new System.Drawing.Point(68, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 18;
+            this.label1.TabIndex = 29;
             this.label1.Text = "Nombre";
             // 
             // devolucion
@@ -509,7 +568,7 @@
             this.devolucion.Location = new System.Drawing.Point(4, 22);
             this.devolucion.Name = "devolucion";
             this.devolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.devolucion.Size = new System.Drawing.Size(790, 328);
+            this.devolucion.Size = new System.Drawing.Size(790, 368);
             this.devolucion.TabIndex = 1;
             this.devolucion.Text = "Devolución";
             this.devolucion.UseVisualStyleBackColor = true;
@@ -521,7 +580,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 650);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BarraTitulo);
@@ -567,6 +625,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage prestamo;
+        private System.Windows.Forms.TabPage devolucion;
+        private System.Windows.Forms.Label contador;
+        private System.Windows.Forms.Label msnContador;
         private System.Windows.Forms.GroupBox gpSexo;
         private System.Windows.Forms.RadioButton Femenino;
         private System.Windows.Forms.RadioButton Masculino;
@@ -579,9 +640,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage devolucion;
-        private System.Windows.Forms.Label contador;
-        private System.Windows.Forms.Label msnContador;
     }
 }
 
