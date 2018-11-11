@@ -71,6 +71,7 @@
             this.fillPrograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fillServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fillSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fnDevolucion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.fillActivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -596,12 +597,15 @@
             this.fillPrograma,
             this.fillServicio,
             this.fillSexo,
+            this.fnDevolucion,
             this.fillActivos});
+            this.dgvDevolucion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDevolucion.Location = new System.Drawing.Point(3, 3);
             this.dgvDevolucion.Name = "dgvDevolucion";
             this.dgvDevolucion.ReadOnly = true;
-            this.dgvDevolucion.Size = new System.Drawing.Size(784, 329);
+            this.dgvDevolucion.Size = new System.Drawing.Size(784, 362);
             this.dgvDevolucion.TabIndex = 14;
+            this.dgvDevolucion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevolucion_CellClick);
             // 
             // fillMatricula
             // 
@@ -648,8 +652,20 @@
             this.fillSexo.ReadOnly = true;
             this.fillSexo.Width = 56;
             // 
+            // fnDevolucion
+            // 
+            this.fnDevolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fnDevolucion.DataPropertyName = "fnDevolucion";
+            this.fnDevolucion.HeaderText = "Devolucion";
+            this.fnDevolucion.Name = "fnDevolucion";
+            this.fnDevolucion.ReadOnly = true;
+            this.fnDevolucion.Text = "Finalizar";
+            this.fnDevolucion.UseColumnTextForButtonValue = true;
+            this.fnDevolucion.Width = 67;
+            // 
             // fillActivos
             // 
+            this.fillActivos.DataPropertyName = "ActivoID";
             this.fillActivos.HeaderText = "ActivoID";
             this.fillActivos.Name = "fillActivos";
             this.fillActivos.ReadOnly = true;
@@ -731,6 +747,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fillPrograma;
         private System.Windows.Forms.DataGridViewTextBoxColumn fillServicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fillSexo;
+        private System.Windows.Forms.DataGridViewButtonColumn fnDevolucion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fillActivos;
     }
 }

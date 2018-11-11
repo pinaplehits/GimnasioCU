@@ -145,5 +145,27 @@ namespace GimnasioCU
         {
             PopulateDataGridView();
         }
+
+        private void dgvDevolucion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvDevolucion.Columns["fnDevolucion"].Index)
+            {
+                if (dgvDevolucion.CurrentRow.Cells["fillActivos"].Value != DBNull.Value)
+                {
+                    if(MessageBox.Show("¿Estás seguro de terminar el servicio?", "Devolución", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        using(SqlConnection sqlcon = new SqlConnection(con))
+                        {
+                            sqlcon.Open();
+                            SqlCommand cmd = new SqlCommand("EliminarActivosID", sqlcon);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@ActivoID", Convert.ToInt32(dgvDevolucion.CurrentRow.Cells["fillActivos"].Value));
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                PopulateDataGridView();
+            }
+        }
     }
 }
