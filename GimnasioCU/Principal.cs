@@ -14,12 +14,26 @@ namespace GimnasioCU
 {
     public partial class Principal : Form
 	{
-		public Principal()
+        String con = "Data Source = DELL; Initial Catalog = gimnasio; Integrated Security = True";
+
+        public Principal()
 		{
 			InitializeComponent();
 
             txtMatricula.MaxLength = 6;
 		}
+
+        void PopulateDataGridView()
+        {
+            using(SqlConnection sqlcon = new SqlConnection(con))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("SELECT * FROM Devolucion", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                dgvDevolucion.DataSource = dtbl;
+            }
+        }
 
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
@@ -67,11 +81,12 @@ namespace GimnasioCU
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = DELL; Initial Catalog = gimnasio; Integrated Security = True"); try
+            SqlConnection sqlcon = new SqlConnection(con);
+            try
             {
-                con.Open();
+                sqlcon.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("No se realizó la conexión");
                 this.Close();
@@ -95,12 +110,13 @@ namespace GimnasioCU
             }
 
 
-            Confirmar = "INSERT INTO activos VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
+            Confirmar = "INSERT INTO Devolucion VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
 
-            SqlCommand myCommand = new SqlCommand(Confirmar, con);
+            SqlCommand myCommand = new SqlCommand(Confirmar, sqlcon);
             int i = myCommand.ExecuteNonQuery();
             MessageBox.Show("Se guardo el registro");
-            con.Close();
+            sqlcon.Close();
+            PopulateDataGridView();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -123,6 +139,11 @@ namespace GimnasioCU
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            PopulateDataGridView();
         }
     }
 }

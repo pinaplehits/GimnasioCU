@@ -65,7 +65,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.devolucion = new System.Windows.Forms.TabPage();
-            this.btnDevolucion = new System.Windows.Forms.Button();
+            this.dgvDevolucion = new System.Windows.Forms.DataGridView();
+            this.fillMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillPrograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillActivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -77,6 +83,7 @@
             this.prestamo.SuspendLayout();
             this.gpSexo.SuspendLayout();
             this.devolucion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -569,7 +576,7 @@
             // 
             // devolucion
             // 
-            this.devolucion.Controls.Add(this.btnDevolucion);
+            this.devolucion.Controls.Add(this.dgvDevolucion);
             this.devolucion.Location = new System.Drawing.Point(4, 22);
             this.devolucion.Name = "devolucion";
             this.devolucion.Padding = new System.Windows.Forms.Padding(3);
@@ -578,20 +585,75 @@
             this.devolucion.Text = "Devolución";
             this.devolucion.UseVisualStyleBackColor = true;
             // 
-            // btnDevolucion
+            // dgvDevolucion
             // 
-            this.btnDevolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.btnDevolucion.FlatAppearance.BorderSize = 0;
-            this.btnDevolucion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.btnDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevolucion.ForeColor = System.Drawing.Color.White;
-            this.btnDevolucion.Location = new System.Drawing.Point(524, 311);
-            this.btnDevolucion.Name = "btnDevolucion";
-            this.btnDevolucion.Size = new System.Drawing.Size(225, 35);
-            this.btnDevolucion.TabIndex = 13;
-            this.btnDevolucion.Text = "Terminar servicio";
-            this.btnDevolucion.UseVisualStyleBackColor = false;
+            this.dgvDevolucion.AllowUserToAddRows = false;
+            this.dgvDevolucion.AllowUserToDeleteRows = false;
+            this.dgvDevolucion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDevolucion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fillMatricula,
+            this.fillNombre,
+            this.fillPrograma,
+            this.fillServicio,
+            this.fillSexo,
+            this.fillActivos});
+            this.dgvDevolucion.Location = new System.Drawing.Point(3, 3);
+            this.dgvDevolucion.Name = "dgvDevolucion";
+            this.dgvDevolucion.ReadOnly = true;
+            this.dgvDevolucion.Size = new System.Drawing.Size(784, 329);
+            this.dgvDevolucion.TabIndex = 14;
+            // 
+            // fillMatricula
+            // 
+            this.fillMatricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillMatricula.DataPropertyName = "matricula";
+            this.fillMatricula.HeaderText = "Matricula";
+            this.fillMatricula.Name = "fillMatricula";
+            this.fillMatricula.ReadOnly = true;
+            this.fillMatricula.Width = 75;
+            // 
+            // fillNombre
+            // 
+            this.fillNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillNombre.DataPropertyName = "nombre";
+            this.fillNombre.HeaderText = "Nombre";
+            this.fillNombre.Name = "fillNombre";
+            this.fillNombre.ReadOnly = true;
+            this.fillNombre.Width = 69;
+            // 
+            // fillPrograma
+            // 
+            this.fillPrograma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillPrograma.DataPropertyName = "programa";
+            this.fillPrograma.HeaderText = "Programa";
+            this.fillPrograma.Name = "fillPrograma";
+            this.fillPrograma.ReadOnly = true;
+            this.fillPrograma.Width = 77;
+            // 
+            // fillServicio
+            // 
+            this.fillServicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillServicio.DataPropertyName = "servicio";
+            this.fillServicio.HeaderText = "Servicio";
+            this.fillServicio.Name = "fillServicio";
+            this.fillServicio.ReadOnly = true;
+            this.fillServicio.Width = 70;
+            // 
+            // fillSexo
+            // 
+            this.fillSexo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillSexo.DataPropertyName = "sexo";
+            this.fillSexo.HeaderText = "Sexo";
+            this.fillSexo.Name = "fillSexo";
+            this.fillSexo.ReadOnly = true;
+            this.fillSexo.Width = 56;
+            // 
+            // fillActivos
+            // 
+            this.fillActivos.HeaderText = "ActivoID";
+            this.fillActivos.Name = "fillActivos";
+            this.fillActivos.ReadOnly = true;
+            this.fillActivos.Visible = false;
             // 
             // Principal
             // 
@@ -606,6 +668,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -620,6 +683,7 @@
             this.gpSexo.ResumeLayout(false);
             this.gpSexo.PerformLayout();
             this.devolucion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevolucion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,7 +725,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDevolucion;
+        private System.Windows.Forms.DataGridView dgvDevolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillMatricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillPrograma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillServicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillActivos;
     }
 }
 
