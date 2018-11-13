@@ -194,6 +194,7 @@
             this.btnConsultas.TabIndex = 0;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.UseVisualStyleBackColor = false;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // pictureBox1
             // 
@@ -251,6 +252,7 @@
             this.btnReporte.TabIndex = 10;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // panel4
             // 
@@ -306,10 +308,10 @@
             // 
             this.tabControl1.Controls.Add(this.prestamo);
             this.tabControl1.Controls.Add(this.devolucion);
-            this.tabControl1.Location = new System.Drawing.Point(285, 204);
+            this.tabControl1.Location = new System.Drawing.Point(256, 204);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 394);
+            this.tabControl1.Size = new System.Drawing.Size(844, 394);
             this.tabControl1.TabIndex = 18;
             // 
             // prestamo
@@ -330,7 +332,7 @@
             this.prestamo.Location = new System.Drawing.Point(4, 22);
             this.prestamo.Name = "prestamo";
             this.prestamo.Padding = new System.Windows.Forms.Padding(3);
-            this.prestamo.Size = new System.Drawing.Size(790, 368);
+            this.prestamo.Size = new System.Drawing.Size(836, 368);
             this.prestamo.TabIndex = 0;
             this.prestamo.Text = "Préstamo";
             this.prestamo.UseVisualStyleBackColor = true;
@@ -346,7 +348,7 @@
             // msnContador
             // 
             this.msnContador.AutoSize = true;
-            this.msnContador.Location = new System.Drawing.Point(222, 60);
+            this.msnContador.Location = new System.Drawing.Point(268, 60);
             this.msnContador.Name = "msnContador";
             this.msnContador.Size = new System.Drawing.Size(227, 13);
             this.msnContador.TabIndex = 30;
@@ -360,7 +362,7 @@
             this.gpSexo.Controls.Add(this.Masculino);
             this.gpSexo.Cursor = System.Windows.Forms.Cursors.Default;
             this.gpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gpSexo.Location = new System.Drawing.Point(225, 232);
+            this.gpSexo.Location = new System.Drawing.Point(271, 225);
             this.gpSexo.Margin = new System.Windows.Forms.Padding(0);
             this.gpSexo.Name = "gpSexo";
             this.gpSexo.Size = new System.Drawing.Size(200, 44);
@@ -432,7 +434,7 @@
             "Tapete Azul",
             "Tenis",
             "Vallas"});
-            this.cBoxServicio.Location = new System.Drawing.Point(225, 193);
+            this.cBoxServicio.Location = new System.Drawing.Point(271, 193);
             this.cBoxServicio.Name = "cBoxServicio";
             this.cBoxServicio.Size = new System.Drawing.Size(497, 21);
             this.cBoxServicio.TabIndex = 38;
@@ -497,7 +499,7 @@
             "Software",
             "Trabajo Social",
             "Turismo"});
-            this.cBoxPrograma.Location = new System.Drawing.Point(225, 142);
+            this.cBoxPrograma.Location = new System.Drawing.Point(271, 142);
             this.cBoxPrograma.Name = "cBoxPrograma";
             this.cBoxPrograma.Size = new System.Drawing.Size(497, 21);
             this.cBoxPrograma.TabIndex = 37;
@@ -505,7 +507,7 @@
             // txtMatricula
             // 
             this.txtMatricula.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtMatricula.Location = new System.Drawing.Point(225, 32);
+            this.txtMatricula.Location = new System.Drawing.Point(271, 32);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(127, 20);
             this.txtMatricula.TabIndex = 36;
@@ -514,7 +516,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(225, 91);
+            this.txtNombre.Location = new System.Drawing.Point(271, 91);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(497, 20);
             this.txtNombre.TabIndex = 35;
@@ -525,7 +527,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 253);
+            this.label5.Location = new System.Drawing.Point(111, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 16);
             this.label5.TabIndex = 34;
@@ -536,7 +538,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 198);
+            this.label4.Location = new System.Drawing.Point(111, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 33;
@@ -547,7 +549,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 32);
+            this.label3.Location = new System.Drawing.Point(111, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 32;
@@ -558,7 +560,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 143);
+            this.label2.Location = new System.Drawing.Point(111, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 16);
             this.label2.TabIndex = 31;
@@ -569,7 +571,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 95);
+            this.label1.Location = new System.Drawing.Point(111, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 29;
@@ -581,7 +583,7 @@
             this.devolucion.Location = new System.Drawing.Point(4, 22);
             this.devolucion.Name = "devolucion";
             this.devolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.devolucion.Size = new System.Drawing.Size(790, 368);
+            this.devolucion.Size = new System.Drawing.Size(836, 368);
             this.devolucion.TabIndex = 1;
             this.devolucion.Text = "Devolución";
             this.devolucion.UseVisualStyleBackColor = true;
@@ -603,7 +605,7 @@
             this.dgvDevolucion.Location = new System.Drawing.Point(3, 3);
             this.dgvDevolucion.Name = "dgvDevolucion";
             this.dgvDevolucion.ReadOnly = true;
-            this.dgvDevolucion.Size = new System.Drawing.Size(784, 362);
+            this.dgvDevolucion.Size = new System.Drawing.Size(830, 362);
             this.dgvDevolucion.TabIndex = 14;
             this.dgvDevolucion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevolucion_CellClick);
             // 

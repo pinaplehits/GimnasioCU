@@ -81,18 +81,7 @@ namespace GimnasioCU
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(con);
-            try
-            {
-                sqlcon.Open();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No se realizó la conexión");
-                this.Close();
-            }
-
-            String Confirmar;
+            String Confirmar;// Confirmar2;
 
             String Nombre = txtNombre.Text;
             String Programa = cBoxPrograma.GetItemText(cBoxPrograma.SelectedItem);
@@ -109,8 +98,22 @@ namespace GimnasioCU
                 Sexo = Femenino.Text;
             }
 
+           /* DateTime myDateTime = DateTime.Now;
+            string Fecha = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");*/
 
             Confirmar = "INSERT INTO Devolucion VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
+            //Confirmar2 = "INSERT INTO Prestamos VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "," + "'" + Fecha + "');";
+
+            SqlConnection sqlcon = new SqlConnection(con);
+            try
+            {
+                sqlcon.Open();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se realizó la conexión");
+                this.Close();
+            }
 
             SqlCommand myCommand = new SqlCommand(Confirmar, sqlcon);
             int i = myCommand.ExecuteNonQuery();
@@ -166,6 +169,20 @@ namespace GimnasioCU
                 }
                 PopulateDataGridView();
             }
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            Consultas settingsForm = new Consultas();
+            settingsForm.Show();
+            this.Hide();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Reportes settingsForm = new Reportes();
+            settingsForm.Show();
+            this.Hide();
         }
     }
 }
