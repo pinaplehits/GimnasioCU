@@ -340,7 +340,7 @@
             // contador
             // 
             this.contador.AutoSize = true;
-            this.contador.Location = new System.Drawing.Point(445, 60);
+            this.contador.Location = new System.Drawing.Point(493, 60);
             this.contador.Name = "contador";
             this.contador.Size = new System.Drawing.Size(0, 13);
             this.contador.TabIndex = 40;
@@ -396,44 +396,6 @@
             this.cBoxServicio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cBoxServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxServicio.FormattingEnabled = true;
-            this.cBoxServicio.Items.AddRange(new object[] {
-            "Aros",
-            "Balón Básquetbol",
-            "Balón Fútbol",
-            "Balón Medicinal (8lbs)",
-            "Balón Medicinal (10lbs)",
-            "Balón Medicinal (14lbs)",
-            "Balón Voleibol",
-            "Banco de salto",
-            "Base ",
-            "Base Banco (Morado)",
-            "Base Banco (Verde)",
-            "Bastón",
-            "Bate",
-            "Bomba Pilates",
-            "Casaca (Blanco)",
-            "Casaca (Morado)",
-            "Cojín ABD",
-            "Cono",
-            "Cuerda",
-            "Espinilleras",
-            "Guante",
-            "Ligas",
-            "Mancuerna",
-            "Par Raquetas",
-            "Pares Rodilleras",
-            "Pelota M (Azul)",
-            "Pelota para Tenis",
-            "Pelota Ping Pong",
-            "Pelota Softball",
-            "Pilates",
-            "Polainas",
-            "Redes Voleibol",
-            "Ruedas plástico",
-            "Silbatos",
-            "Tapete Azul",
-            "Tenis",
-            "Vallas"});
             this.cBoxServicio.Location = new System.Drawing.Point(271, 193);
             this.cBoxServicio.Name = "cBoxServicio";
             this.cBoxServicio.Size = new System.Drawing.Size(497, 21);
@@ -444,61 +406,6 @@
             this.cBoxPrograma.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cBoxPrograma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxPrograma.FormattingEnabled = true;
-            this.cBoxPrograma.Items.AddRange(new object[] {
-            "Administración de Empresas",
-            "Aeronáutica",
-            "Ambiental",
-            "Arquitectura",
-            "Artes Visuales",
-            "Biología",
-            "Biomédica",
-            "Biotecnología",
-            "Cirujano Dentista",
-            "Civil",
-            "Comercio Exterior",
-            "Contaduría",
-            "Derecho",
-            "Diseño Digital de Medios Interactivos",
-            "Diseño Gráfico",
-            "Diseño Industrial",
-            "Diseño Urbano y del Paisaje",
-            "Diseño de Interiores",
-            "Economía",
-            "Educación",
-            "Eléctrica",
-            "Enfermería",
-            "Enseñanza del Inglés",
-            "Entrenamiento Deportivo",
-            "Finanzas",
-            "Física",
-            "Geociencias",
-            "Geoinformática",
-            "Gerontología",
-            "Historia",
-            "Industrial y de Sistemas",
-            "Licenciatura Hispanomexicana",
-            "Manufactura",
-            "Matemáticas",
-            "Mecatrónica",
-            "Mecánica",
-            "Médico Cirujano",
-            "Médico Veterinario Zootecnista",
-            "Música",
-            "Nutrición",
-            "Periodismo",
-            "Producción Musical",
-            "Psicología",
-            "Publicidad",
-            "Química",
-            "Químico Farmacéutico Biólogo",
-            "Seguridad y Políticas Públicas",
-            "Sistemas Automotrices",
-            "Sistemas Computacionales",
-            "Sistemas Digitales y comunicaciones",
-            "Sociología",
-            "Software",
-            "Trabajo Social",
-            "Turismo"});
             this.cBoxPrograma.Location = new System.Drawing.Point(271, 142);
             this.cBoxPrograma.Name = "cBoxPrograma";
             this.cBoxPrograma.Size = new System.Drawing.Size(497, 21);
@@ -529,7 +436,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(111, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 16);
+            this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Sexo";
             // 
@@ -540,7 +447,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(111, 198);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 16);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 33;
             this.label4.Text = "Servicio";
             // 
@@ -551,7 +458,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(111, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 32;
             this.label3.Text = "Matrícula";
             // 
@@ -562,7 +469,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(111, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 16);
+            this.label2.Size = new System.Drawing.Size(159, 16);
             this.label2.TabIndex = 31;
             this.label2.Text = "Programa académico";
             // 
@@ -573,7 +480,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(111, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 29;
             this.label1.Text = "Nombre";
             // 

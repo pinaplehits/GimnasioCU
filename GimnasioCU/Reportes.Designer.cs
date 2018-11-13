@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnVentana = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.gimnasioDataSet1 = new GimnasioCU.gimnasioDataSet1();
+            this.Prestamos1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Prestamos1TableAdapter = new GimnasioCU.gimnasioDataSet1TableAdapters.Prestamos1TableAdapter();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Prestamos1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -112,12 +119,29 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GimnasioCU.Report1.rdlc";
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.Prestamos1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GimnasioCU.Report.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 25);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1150, 625);
             this.reportViewer1.TabIndex = 16;
+            // 
+            // gimnasioDataSet1
+            // 
+            this.gimnasioDataSet1.DataSetName = "gimnasioDataSet1";
+            this.gimnasioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Prestamos1BindingSource
+            // 
+            this.Prestamos1BindingSource.DataMember = "Prestamos1";
+            this.Prestamos1BindingSource.DataSource = this.gimnasioDataSet1;
+            // 
+            // Prestamos1TableAdapter
+            // 
+            this.Prestamos1TableAdapter.ClearBeforeFill = true;
             // 
             // Reportes
             // 
@@ -135,6 +159,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gimnasioDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Prestamos1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +172,8 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnSalir;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource Prestamos1BindingSource;
+        private gimnasioDataSet1 gimnasioDataSet1;
+        private gimnasioDataSet1TableAdapters.Prestamos1TableAdapter Prestamos1TableAdapter;
     }
 }

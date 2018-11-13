@@ -57,6 +57,8 @@ namespace GimnasioCU
 
         private void Reportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'gimnasioDataSet1.Prestamos1' Puede moverla o quitarla según sea necesario.
+            this.Prestamos1TableAdapter.Fill(this.gimnasioDataSet1.Prestamos1);
 
             this.reportViewer1.RefreshReport();
         }

@@ -37,13 +37,12 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fillPrestamoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conPrograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conFechaPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPrograma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPrestamosID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
@@ -146,54 +145,69 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fillPrestamoID,
-            this.conMatricula,
-            this.conNombre,
-            this.conPrograma,
-            this.conServicio,
-            this.conSexo,
-            this.conFechaPrestamo});
-            this.dataGridView1.Location = new System.Drawing.Point(256, 80);
+            this.txtMatricula,
+            this.txtNombre,
+            this.txtPrograma,
+            this.txtServicios,
+            this.txtSexo,
+            this.txtPrestamosID});
+            this.dataGridView1.Location = new System.Drawing.Point(256, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(832, 521);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 607);
             this.dataGridView1.TabIndex = 17;
             // 
-            // fillPrestamoID
+            // txtMatricula
             // 
-            this.fillPrestamoID.DataPropertyName = "fillPrestamoID";
-            this.fillPrestamoID.HeaderText = "Column1";
-            this.fillPrestamoID.Name = "fillPrestamoID";
-            this.fillPrestamoID.Visible = false;
+            this.txtMatricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtMatricula.DataPropertyName = "Matricula";
+            this.txtMatricula.HeaderText = "Matricula";
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Width = 75;
             // 
-            // conMatricula
+            // txtNombre
             // 
-            this.conMatricula.HeaderText = "Matricula";
-            this.conMatricula.Name = "conMatricula";
+            this.txtNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtNombre.DataPropertyName = "Nombre";
+            this.txtNombre.HeaderText = "Nombre";
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Width = 69;
             // 
-            // conNombre
+            // txtPrograma
             // 
-            this.conNombre.HeaderText = "Nombre";
-            this.conNombre.Name = "conNombre";
+            this.txtPrograma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtPrograma.DataPropertyName = "Programa";
+            this.txtPrograma.HeaderText = "Programa";
+            this.txtPrograma.Name = "txtPrograma";
+            this.txtPrograma.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.txtPrograma.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.txtPrograma.Width = 58;
             // 
-            // conPrograma
+            // txtServicios
             // 
-            this.conPrograma.HeaderText = "Programa";
-            this.conPrograma.Name = "conPrograma";
+            this.txtServicios.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtServicios.DataPropertyName = "Servicio";
+            this.txtServicios.HeaderText = "Servicios";
+            this.txtServicios.Name = "txtServicios";
+            this.txtServicios.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.txtServicios.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.txtServicios.Width = 56;
             // 
-            // conServicio
+            // txtSexo
             // 
-            this.conServicio.HeaderText = "Servicio";
-            this.conServicio.Name = "conServicio";
+            this.txtSexo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtSexo.DataPropertyName = "Sexo";
+            this.txtSexo.HeaderText = "Sexo";
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Width = 56;
             // 
-            // conSexo
+            // txtPrestamosID
             // 
-            this.conSexo.HeaderText = "Sexo";
-            this.conSexo.Name = "conSexo";
-            // 
-            // conFechaPrestamo
-            // 
-            this.conFechaPrestamo.HeaderText = "Fecha Préstamo";
-            this.conFechaPrestamo.Name = "conFechaPrestamo";
+            this.txtPrestamosID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.txtPrestamosID.DataPropertyName = "PrestamosID";
+            this.txtPrestamosID.HeaderText = "PrestamosID";
+            this.txtPrestamosID.Name = "txtPrestamosID";
+            this.txtPrestamosID.Visible = false;
+            this.txtPrestamosID.Width = 92;
             // 
             // Consultas
             // 
@@ -206,6 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultas";
             this.Text = "Consultas";
+            this.Load += new System.EventHandler(this.Consultas_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
@@ -228,12 +243,11 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fillPrestamoID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conMatricula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conPrograma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conServicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conSexo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn conFechaPrestamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtMatricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtPrograma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtPrestamosID;
     }
 }

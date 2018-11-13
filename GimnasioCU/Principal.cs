@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace GimnasioCU
 {
@@ -35,7 +29,38 @@ namespace GimnasioCU
             }
         }
 
-		private void btnSalir_Click(object sender, EventArgs e)
+        void PopulateComboBox()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(con))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("SELECT * FROM Programas", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                cBoxPrograma.DataSource = dtbl;
+                cBoxPrograma.ValueMember = "ProgramaID";
+                cBoxPrograma.DisplayMember = "Programa";
+                DataRow topItem = dtbl.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "-Seleccionar";
+                dtbl.Rows.InsertAt(topItem, 0);
+                cBoxPrograma.DataSource = dtbl;
+            }
+
+            using (SqlConnection sqlcon = new SqlConnection(con))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("SELECT * FROM Servicios", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                cBoxServicio.DataSource = dtbl;
+                cBoxServicio.ValueMember = "ServicioID";
+                cBoxServicio.DisplayMember = "Servicio";
+                cBoxServicio.DataSource = dtbl;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
@@ -81,7 +106,7 @@ namespace GimnasioCU
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            String Confirmar;// Confirmar2;
+            String Confirmar, Confirmar2;
 
             String Nombre = txtNombre.Text;
             String Programa = cBoxPrograma.GetItemText(cBoxPrograma.SelectedItem);
@@ -98,27 +123,66 @@ namespace GimnasioCU
                 Sexo = Femenino.Text;
             }
 
-           /* DateTime myDateTime = DateTime.Now;
-            string Fecha = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");*/
-
             Confirmar = "INSERT INTO Devolucion VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
-            //Confirmar2 = "INSERT INTO Prestamos VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "," + "'" + Fecha + "');";
+            Confirmar2 = "INSERT INTO Prestamos1 VALUES(" + "'" + Matricula + "'" + "," + "'" + Nombre + "'" + "," + "'" + Programa + "'" + "," + "'" + Servicio + "'" + "," + "'" + Sexo + "');";
 
             SqlConnection sqlcon = new SqlConnection(con);
-            try
-            {
-                sqlcon.Open();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No se realizó la conexión");
-                this.Close();
-            }
 
-            SqlCommand myCommand = new SqlCommand(Confirmar, sqlcon);
-            int i = myCommand.ExecuteNonQuery();
-            MessageBox.Show("Se guardo el registro");
-            sqlcon.Close();
+            if (txtMatricula.Text.Trim() == string.Empty || txtNombre.Text.Trim() == string.Empty || cBoxPrograma.SelectedIndex == -1 || cBoxServicio.SelectedIndex == -1 || !(this.Masculino.Checked || this.Femenino.Checked))
+            {
+                MessageBox.Show("Por favor verifique que todos los campos estén llenados");
+                return;
+            }
+            else
+            {
+                if (txtMatricula.TextLength == 6)
+                {
+                    try
+                    {
+                        sqlcon.Open();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("No se realizó la conexión");
+                        this.Close();
+                    }
+                    SqlCommand myCommand = new SqlCommand(Confirmar, sqlcon);
+                    int i = myCommand.ExecuteNonQuery();
+                    MessageBox.Show("Se guardo el registro");
+                    SqlCommand cmd = new SqlCommand(Confirmar2, sqlcon);
+                    int o = cmd.ExecuteNonQuery();
+                    //MessageBox.Show("Se guardo el otro registro");
+                    sqlcon.Close();
+                }
+
+                if (txtMatricula.TextLength < 6)
+                {
+                    DialogResult dialogResult = MessageBox.Show("¿Estás seguro de ingresar una matrícula con 5 dígitos?", "Aviso matrícula", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            sqlcon.Open();
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("No se realizó la conexión");
+                            this.Close();
+                        }
+                        SqlCommand myCommand = new SqlCommand(Confirmar, sqlcon);
+                        int i = myCommand.ExecuteNonQuery();
+                        MessageBox.Show("Se guardo el registro");
+                        SqlCommand cmd = new SqlCommand(Confirmar2, sqlcon);
+                        int o = cmd.ExecuteNonQuery();
+                        //MessageBox.Show("Se guardo el otro registro");
+                        sqlcon.Close();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+            }
             PopulateDataGridView();
         }
 
@@ -146,6 +210,7 @@ namespace GimnasioCU
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            PopulateComboBox();
             PopulateDataGridView();
         }
 

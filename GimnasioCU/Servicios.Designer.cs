@@ -35,15 +35,17 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnServicios = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.EditElim = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fillServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.fillServiciosID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agregar = new System.Windows.Forms.TabPage();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.txtAgregar = new System.Windows.Forms.TextBox();
+            this.nomSer = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -51,6 +53,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.EditElim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Agregar.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -125,71 +131,11 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(208)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnReporte);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnServicios);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnCrear);
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 625);
             this.panel1.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.panel4.Location = new System.Drawing.Point(0, 450);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(24, 35);
-            this.panel4.TabIndex = 11;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(25, 450);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(225, 35);
-            this.btnReporte.TabIndex = 10;
-            this.btnReporte.Text = "Editar servicio";
-            this.btnReporte.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.panel3.Location = new System.Drawing.Point(0, 366);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 35);
-            this.panel3.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.panel2.Location = new System.Drawing.Point(0, 283);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(24, 35);
-            this.panel2.TabIndex = 7;
-            // 
-            // btnServicios
-            // 
-            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.btnServicios.FlatAppearance.BorderSize = 0;
-            this.btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.Location = new System.Drawing.Point(25, 366);
-            this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(225, 35);
-            this.btnServicios.TabIndex = 8;
-            this.btnServicios.Text = "Actualizar servicio";
-            this.btnServicios.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -201,50 +147,130 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCrear
+            // EditElim
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
-            this.btnCrear.FlatAppearance.BorderSize = 0;
-            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(25, 283);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(225, 35);
-            this.btnCrear.TabIndex = 0;
-            this.btnCrear.Text = "Crear servicio";
-            this.btnCrear.UseVisualStyleBackColor = false;
+            this.EditElim.Controls.Add(this.dataGridView1);
+            this.EditElim.Location = new System.Drawing.Point(4, 22);
+            this.EditElim.Name = "EditElim";
+            this.EditElim.Size = new System.Drawing.Size(812, 443);
+            this.EditElim.TabIndex = 2;
+            this.EditElim.Text = "Editar y eliminar";
+            this.EditElim.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // dataGridView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 308);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Servicio:";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fillServicio,
+            this.Eliminar,
+            this.fillServiciosID});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(812, 443);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
-            // comboBox1
+            // fillServicio
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(409, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(538, 21);
-            this.comboBox1.TabIndex = 18;
+            this.fillServicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fillServicio.DataPropertyName = "Servicio";
+            this.fillServicio.HeaderText = "Servicio";
+            this.fillServicio.Name = "fillServicio";
+            this.fillServicio.ReadOnly = true;
+            this.fillServicio.Width = 70;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForButtonValue = true;
+            this.Eliminar.Width = 5;
+            // 
+            // fillServiciosID
+            // 
+            this.fillServiciosID.DataPropertyName = "ServicioID";
+            this.fillServiciosID.HeaderText = "ServiciosID";
+            this.fillServiciosID.Name = "fillServiciosID";
+            this.fillServiciosID.ReadOnly = true;
+            this.fillServiciosID.Visible = false;
+            // 
+            // Agregar
+            // 
+            this.Agregar.Controls.Add(this.btnConfirmar);
+            this.Agregar.Controls.Add(this.txtAgregar);
+            this.Agregar.Controls.Add(this.nomSer);
+            this.Agregar.Location = new System.Drawing.Point(4, 22);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Padding = new System.Windows.Forms.Padding(3);
+            this.Agregar.Size = new System.Drawing.Size(812, 443);
+            this.Agregar.TabIndex = 0;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(118)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(82)))), ((int)(((byte)(200)))));
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(449, 289);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(225, 35);
+            this.btnConfirmar.TabIndex = 13;
+            this.btnConfirmar.Text = "Agregar servicio";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // txtAgregar
+            // 
+            this.txtAgregar.Location = new System.Drawing.Point(254, 181);
+            this.txtAgregar.Name = "txtAgregar";
+            this.txtAgregar.Size = new System.Drawing.Size(420, 20);
+            this.txtAgregar.TabIndex = 1;
+            this.txtAgregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // nomSer
+            // 
+            this.nomSer.AutoSize = true;
+            this.nomSer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomSer.Location = new System.Drawing.Point(59, 176);
+            this.nomSer.Name = "nomSer";
+            this.nomSer.Size = new System.Drawing.Size(189, 25);
+            this.nomSer.TabIndex = 0;
+            this.nomSer.Text = "Nombre del servicio:";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Agregar);
+            this.tabControl1.Controls.Add(this.EditElim);
+            this.tabControl1.Location = new System.Drawing.Point(268, 159);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(820, 469);
+            this.tabControl1.TabIndex = 17;
             // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 650);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Servicios";
             this.Text = "Servicios";
+            this.Load += new System.EventHandler(this.Servicios_Load);
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnVentana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -252,8 +278,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.EditElim.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Agregar.ResumeLayout(false);
+            this.Agregar.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -265,14 +295,16 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnServicios;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TabPage EditElim;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage Agregar;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.TextBox txtAgregar;
+        private System.Windows.Forms.Label nomSer;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillServicio;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fillServiciosID;
     }
 }

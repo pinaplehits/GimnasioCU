@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using System.Data.SqlClient;
 namespace GimnasioCU
 {
     public partial class Consultas : Form
@@ -16,6 +16,20 @@ namespace GimnasioCU
         public Consultas()
         {
             InitializeComponent();
+        }
+
+        String con = "Data Source = DELL; Initial Catalog = gimnasio; Integrated Security = True";
+
+        void PopulateDataGridView()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(con))
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlda = new SqlDataAdapter("SELECT * FROM Prestamos1", sqlcon);
+                DataTable dtbl = new DataTable();
+                sqlda.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -54,6 +68,12 @@ namespace GimnasioCU
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Consultas_Load(object sender, EventArgs e)
+        {
+            //PopulateComboBox();
+            PopulateDataGridView();
         }
     }
 }
